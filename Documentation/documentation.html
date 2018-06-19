@@ -676,7 +676,7 @@
 		
 		<p>
 			The read page is a customisable interface allowing you to actualy read your comics. Clicking the Menu button
-			(1) will show/hide the Menu Pane.
+			will show/hide the Menu Pane.
 		</p>
 			<div class="image-container">
 				<img src="resources/img/read_01.png" alt="[img]"><br>
@@ -684,7 +684,7 @@
 			</div>
 		<p>	
 			<a name="Selecting Comics To Read"><h4>Selecting Comics To Read</h4></a>
-			All your comics will be listed as checkboxes (2), 
+			All your comics will be listed as checkboxes
 			from which you can select the comic books you'd like to read. 
 			By default, the comics are listed alphabetically. Clicking Sort By Date will sort them by date last read
 			(hovering over a comic book will show you what that date is), and typing into the search box will narrow 
@@ -696,7 +696,7 @@
 			<br><br>
 			If you only want a certain number of comic pages from each book to be loaded (if, for example, you have 100 of one
 			comic and 30 of another but want an even spread of each) type the number of comic pages you'd like in the
-			Limit Number textbox (3). Note that this works well with randomisation: basically, Lief removes read comic 
+			Limit Number textbox. Note that this works well with randomisation: basically, Lief removes read comic 
 			pages (if need be) and randomises (if need be) before picking the specified number of comic pages from each comic
 			book. Then the whole pool is randomised (if need be). Clicking Go will move Lief to act on your 
 			specifications and present you with your first comic page (if there are any to show).
@@ -709,7 +709,7 @@
 			about this while reading). These two checkboxes are part of the set of variables saved as user settings
 			if you've told Lief he should save such things (see <a href="#Settings">here</a></li> for more information on that).
 			<br><br>
-			The Comic Order option (5) specifies Lief's randomisation behaviour. Each comic book has a default setting, 
+			The Comic Order option specifies Lief's randomisation behaviour. Each comic book has a default setting, 
 			which can be changed from the Manage Page- either they should be randomised, or not. You can set Comic Order 
 			to Default if you want Lief to respect this behaviour; Sorted will force ordering (note, comic pages are 
 			ordered by comic page number and then by comic book name); Random will force randomisation of all comic books. 
@@ -720,23 +720,22 @@
 			all the comic pages, but comic books that should be ordered will keep their order releative to other comic 
 			pages in the same book. Note that forcing randomisation will override this behaviour. 
 			<br><br>
-			Newly added, and not shown on the diagram yet, is a Width textbox. I've sometimes found that having the 
-			comic pages fill the entire width makes them...
-			too wide. Enter a number in here and press enter to specify the actual image field width. Bound and unbound
-			functionality will work the same - the only difference is the maximum width of the comic images. Enter 
-			<code>0</code> to reset to maximum. 
+			The Width textbox sets the maximum width of the image, and works with the Bounding type to configure how a comic image is presented. You can
+			either write AUTO or an integer in the textbox and press ENTER. If AUTO, the width is determined by whatever Bounding type
+			is selected (these Bounding types can be selected with the button in the top right corner, and are 
+			discussed <a href="#Bound/unbound">here</a>). If an integer
+			is entered, that will determine the maximum width of the image. Bound and Unbound
+			functionality will work the same - the only difference is the maximum width of the comic images.
 			<br><br>
-			Also newly added and not shown yet is the Scroll Delay, or S.Delay, textbox. This textbox can either contain an integer > 0, or "auto".
-			If there is an integer, that will be the overriding setting for how long Lief will pause scrolls for.
-			If you put "auto" in there, Lief will defer to the comic configurations where it can, or- faling that- the last 
-			entered integer.
+			Enter a scroll delay into the Scroll Delay textbox to override any comic-specific configurations or keep AUTO to 
+			respect comic-specific configurations (press ENTER to enact change). This is the the number of seconds to wait
+			before going to the next page (if hands-free is enabled) and before starting to scroll on a new page (if scroll speed is greater than 0).
 			<br><br>
-			Also newly added and not shown yet is the HandsOff checkbox. With this feature turned on, Lief will automatically
+			Check Hannds Free to enable hands-free mode. With this feature turned on, Lief will automatically
 			turn the page after a delay (the delay begins when image has been scrolled). The delay is the same amount of time
 			that Lief would pause a scroll for.
-			
 			<br><br>
-			These textbox settings come intio effect when you press enter with the cursor focused in them.
+			Remember- the textbox settings come into effect when you press enter with the cursor focused in them.
 			
 			<a name="Select Details"><h4>Select Details</h4></a>
 			By default, Lief will will show you all the information he can about a comic page: the name, the author(s), the
