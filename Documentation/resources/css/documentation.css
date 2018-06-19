@@ -1,0 +1,95 @@
+@media screen {
+	body {
+		font-size: 16px;
+		font-family: "Verdana";
+		background: Black;
+		color: PowderBlue;
+	}
+
+	/*Headings and subheadings*/
+	h1, h2, h3 {
+		Margin: 10px 0 0 0;
+		color: Fuchsia;
+		font-family: "Tekton Pro";
+		font-weight: 900;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 50px;
+	}
+	h2 {
+		text-align: center;
+		font-size: 40px;
+	}
+	h3 {
+		font-size: 30px;
+		display: inline;
+	}
+	h4 {
+		margin-bottom: 3px;
+		color: MediumSlateBlue;
+	}
+
+
+	#contents-header {
+		margin: 20px 0 0 0;
+	}
+
+	.author {
+		font-size: 20px;
+		Margin: 0 0 0 0;
+	}
+
+	.image-container {
+		text-align: center;
+		border: 1px solid Lightblue;
+		padding: 10px 0 10px 0;
+		
+	}
+
+	/*Tables*/
+	table, th, td {
+		vertical-align: top;
+		padding: 5px;
+		border: 1px solid Lightblue;
+		border-collapse: collapse;
+	}
+	table {
+		Margin: 10px 0 0 0;
+	}
+	th {
+		text-align: right;
+		color: MediumSlateBlue;
+		font-size: 16px;
+		font-weight: 100;
+	}
+
+
+	/*Anchors*/
+	a {
+		color: CornflowerBlue;
+	}
+	a:Visited {
+		color: LightSteelBlue;
+	}
+	a:Hover {
+		color: White;
+	}
+
+	/*I don't want the anchor destinations to act like anchors*/
+	h4 a:Visited {
+		color: MediumSlateBlue;
+	}
+	h4 a:Hover {
+		color: MediumSlateBlue;
+	}
+	h4 a {
+		color: MediumSlateBlue;
+	}
+
+
+	div img {
+		border: 1px solid Lightblue;
+	}
+}

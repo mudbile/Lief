@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lief Manual</title>
+		<link rel="stylesheet" href="resources/css/documentation.css">
+		<link rel="icon" href="resources/img/icon.png">
+	</head>
+	<body>
+		<h1>Lief User Manual</h1>
+		<h2 class="author">Daniel Dowsett</h2>
+		
+		<!--Contents-->
+		<a name="Contents"><h3 id="contents-header">Contents</h3></a>
+		<ul>
+			<li><a href="#Introduction">Introduction</a></li>
+			<li><a href="#Quick Start Guide">Quick Start Example: xkcd</a></li>
+			<li><a href="#Settings">Settings Page</a></li>
+			<li><a href="#Manage">Manage Page</a>
+				<ul>
+					<li><a href="#The Menu And Loading/Saving Config Files">The Menu And Creating/Loading/Saving Config Files</a></li>
+					<li><a href="#Import/Export Configs">Import/Export Config Files</a></li>
+					<li><a href="#Web Comics">Web Comics: Overview</a></li>
+					<li><a href="#Transition Delay">Web Comics: Default Transition Delay</a></li>
+					<li><a href="#Scroll Delay">Web Comics: Default Scroll Delay</a></li>
+					<li><a href="#Start Pages">Web Comics: Start Pages</a></li>
+					<li><a href="#Normal Selectors">Web Comics: Image And Next Page Selectors</a></li>
+					<li><a href="#Extra Selectors">Web Comics: Extra Selectors</a></li>
+					<li><a href="#Anchor Selector">Web Comics: Anchor Selector</a></li>
+					<li><a href="#Cookies">Web Comics: Cookies</a></li>
+					<li><a href="#Other Options">Web Comics: Other Options</a></li>
+					
+					<li><a href="#Scanned Comics">Scanned Comics: Overview</a></li>
+					<li><a href="#Import Archives">Scanned Comics: Import Archives</a></li>
+					<li><a href="#Import Folder">Scanned Comics: Import Folder</a></li>
+					<li><a href="#Add Pages">Scanned Comics: Add Pages</a></li>
+					
+					<li><a href="#Fix Missing Pages ">Fix Missing Pages</a></li>
+					<li><a href="#Read Configurations">Read Configurations</a></li>
+				</ul>
+			</li>
+			<li><a href="#Update">Update Page</a></li>
+			<li><a href="#Read">Read Page</a>
+				<ul>
+					<li><a href="#Selecting Comics To Read">Selecting Comics To Read</a></li>
+					<li><a href="#Read Options">Read Options</a></li>
+					<li><a href="#Selecting Comics">Selecting Comics</a></li>
+					<li><a href="#Select Details">Select Details</a></li>
+					<li><a href="#Bound/unbound">Bound/Unbound Pages</a></li>
+					<li><a href="#Favourites">Favourites</a></li>
+					<li><a href="#Navigation">Navigating, Zooming and Scrolling</a></li>
+				</ul>
+			</li>
+			<li><a href="#Shortcut Keys">Shortcut Keys</a>
+				<ul>
+					<li><a href="#Keys All">All Pages</a></li>
+					<li><a href="#Keys Main Menu">Main Menu Page </a></li>
+					<li><a href="#Keys Read">Read Page</a></li>
+					<li><a href="#Keys Manage">Manage Page</a></li>
+					<li><a href="#Keys Update">Update Page</a></li>
+					<li><a href="#Keys Crawl">Crawl Page</a></li>
+				</ul>
+			</li>
+			<li><a href="#Errors">Errors</a>
+			<li><a href="#Extra Resources">Extra Resources and Information</a>
+				<ul>
+					<li><a href="#Tips">Tips</a></li>
+					<li><a href="#CSS Selector Tool">CSS Selector Tool</a></li>
+				</ul>
+			</li>
+			<li><a href="#Contact">Contact Info</a>
+		</ul>
+		
+		<!--Introduction-->
+		<br><br><br>
+		<a name="Introduction"><h3>Introduction</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Contents" class="top">[Top]</a>
+		
+		<p>
+			Lief is an application for collecting, organising and reading comics of a digital nature- either web comics 
+			or scanned comic books. There are quite a few benefits to using Lief, including:
+			<ul>
+				<li>
+					Lief can remember what you've read, giving you the ability to randomise from a bunch of comics and never 
+					read the same page twice.
+				</li>
+				<li>
+					You can easily configure some comics to maintain order relative to themselves and randomise others
+					by default, making for an intuitive concept of overall randomisation.
+					
+				</li>
+				<li>
+					Lief can provide a very minimilistic interface when reading comic pages.
+				</li>
+				<li>
+					All of your comics are accessible from the one interface. With Lief you can be reading many comics at once. 
+					While reading comics, there is no difference between scraped comics and scanned comics. 
+				</li>
+				<li>
+					Scanned comics (i.e. multiple image archives or folders) can be imported with a few clicks. All web comics
+					can be updated with one or two clicks too.
+				</li>
+				<li>
+					Comic pages are stored on your computer, which means you can read while offline. You have free reign over
+					the organisation of comic books (i.e. folder structure of the comic book directory).
+				</li>
+			</ul>
+			This manual will take you on an in-depth tour of Lief, including the more advanced scraping features. It is 
+			worth noting that if you just want to use Lief to manage scanned comics, or if you can find config files, you 
+			may never have to make use of these features.
+		</p>
+
+		
+		
+		<!--Quick Start Example: xkcd-->
+		<br><br><br>
+		<a name="Quick Start Guide"><h3 class="break">Quick Start Example: xkcd</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Contents" class="top">[Top]</a>
+		<p>
+			The following example will breeze over the details, showing you how to set up, collect and read a web 
+			comic.
+			<h4>1) Setting up the config file</h4>	
+			Running the executable should present you with the Main Menu. From here, click to enter into the 
+			Manage page.
+			One of the main functions of this page is facilitating the addition of comic books to your library. For this 
+			example, we'll be adding a popular web comic called <em>xkcd</em>, so fill in the name of the comic and the author 
+			(Randall Munroe). Because this a web comic, we also need three fudamental pieces of 
+			information. The necessary information is shown below:
+		</p>
+		<div class="image-container">
+			<img src="resources/img/xkcd_fields_1.png" alt="[img]"><br>
+			<em>Figure 1: Lief With Fields Filled For The XKCD Web Comic</em>
+		</div>
+		<p>
+			The Start Page field is fairly self-explanatory- it's the URL of the first page of the web comic 
+			(don't forget the protocol). Note that multiple start pages and other nifty things are possible, but we only 
+			need one for this example. The other two are CSS selectors. The web already contains everything you
+			could care to know about CSS selectors
+			(<a href="https://developer.mozilla.org/en/docs/Web/Guide/CSS/Getting_started/Selectors">Mozilla</a>,
+			for example, has some great resources). Lief uses them to identify important elements while scraping. The Image 
+			Selector locates the comic image on each page for Lief to download, and the Next Page Selector locates the link 
+			on each page that Lief will follow to get to the next one. 
+		</p>
+		<p>
+			The next two bits of information aren't necessary, but they do provide a good example of custom user selectors. 
+			Under the Optional expando, fill the fields as shown below:
+		</p>
+		<div class="image-container">
+			<img src="resources/img/xkcd_fields_2.png" alt="[img]"><br>
+			<em>Figure 2: Custom User Selector Fields</em>
+		</div>
+		<p>
+			The first row selects the title for each comic, and the second row selects the hover text (to add a row, press the "+"
+			button). Lief will store this information, which we can choose to display when reading the comic. 
+		</p>
+			<h4>2) Saving the config file</h4>
+			To save the comic book details, click Menu -> Save Config To File. Lief will open the Save File
+			dialog to the comic book directory, which by default is the same location the executable is in.
+			Create a folder, name it "xkcd" (the folder name is inconsequential), and save the config file inside the folder. 
+			<h4>3) Grabbing Comic Book Pages</h4>
+			Updating the comic book is fairly simple. From the Main Menu, click into the Update page, click Select All (or 
+			simply check <em>xkcd</em>), and click Update All. The scraper engine will start automatically, and information
+			will start scrolling as the engine goes from the start url, collecting and saving image files. For this example, 
+			only grab a few comic pages. To stop the engine, click Stop. The engine will stop scraping after it finishes
+			the current batch, and you'll be able to press Back to go back to the Main Menu.
+			<h4>4) Reading Comics</h4>
+			From the Main Menu, click into the Read page. Click the Options button to drop down the options panel, 
+			check <em>xkcd</em> and click Go. Click the Options button again to hide the options panel and you should 
+			see the first xkcd comic. You'll notice the details panel showing information about this specific 
+			comic page. The last two lines are the title and the hover text of the comic. You can show/hide details 
+			by checking/unchecking items under Select Details in the options panel. To view comics without any clutter,
+			uncheck <em>Any</em>, check <em>Hide Borders</em>, press F11 to enter full screen mode and click the Hide Buttons
+			button (moving the mouse to the top or bottom of the page or pressing escape will show the buttons again). This
+			will give you a completely full-screen comic image on your monitor.
+			Pressing the right arrow key, D, or clicking the right hand pointer button will iterate to the next comic.
+			Check the <em>Random</em> radio box to randomise the comics. 
+		</p>
+		<p>
+			There are many details that were glossed over here, and much functionality was left out, but hopefully
+			this gave you an idea of how it feels to set up, collect and read comics using Lief.
+		</p>
+
+		
+		
+		<!--Settings Page-->
+		<br><br><br>
+		<a name="Settings"></li><h3 class="break">Settings Page</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Contents" class="top">[Top]</a>
+		<p>
+			This page contains miscellaneous settings. There's not many- a lot of the customisation within Lief is done
+			by configuring the Read page.
+		</p>
+		<div class="image-container">
+			<img src="resources/img/settings_page.png" alt="[img]"><br>
+			<em>Figure 3: Settings Page</em>
+		</div>
+		<p>
+			<table>
+				<tr>
+					<th>Comics Parent Directory</th>
+					<td>
+						This is the path to the folder where your comic books are kept. 
+						Paths can be relative to the Lief executable (for example, "." denotes the same folder as
+						the Lief executable). You can type it in or search for a folder by pressing the 
+						Select Folder button.
+					</td>
+				</tr>
+				<tr>
+					<th>Verbose Mode</th>
+					<td>
+						With Verbose Mode turned on, you will encounter a few more informative dialogues and the like. 
+					</td>
+				</tr>
+				<tr>
+					<th>Save User Configurations</th>
+					<td>
+						With this selected, Lief will remember settings both in the Settings Page and in the Read Page.
+						Otherwise settings are local to the current session.
+					</td>
+				</tr>
+				<tr>
+					<th>Comic Fade Time</th>
+					<td>
+						The amount of time (in seconds) for the comic fade animation between pages.
+					</td>
+				</tr>
+				<tr>
+					<th>Attempts Before Batch Fail</th>
+					<td>
+						This is the amount of times that Lief can sequentially find no comics or anchors (for indirect
+						configurations) before giving up on the batch. It's pointless to have Lief keep going
+						to the next page, and the next page, and all the time be failing to get any images. Set to -1
+						to make it effectively limitless (it will become the maximum: 2,147,483,647).
+					</td>
+				</tr>
+				<tr>
+					<th>Font Sizes</th>
+					<td>
+						There are three font levels. Generally speaking, H1 is for page headers, H2 is for buttons 
+						and page subheadings, and H3 is for textboxes, checkboxes and radio boxes.
+						<br><br>
+						Details Font Size is font size for the details panel in the Read Page, and 
+						Console Font Size is the font size for the console in the Update Page.
+					</td>
+				</tr>
+				<tr>
+					<th>Reset To Default Settings</th>
+					<td>
+						Reset all the settings to defaults. Pressing "No" at the prompt will make the reversion 
+						temporary. Pressing "Yes" will save the defaults as your new settings.
+					</td>
+				</tr>
+			</table> 
+		</p>
+		
+		
+		<!--Manage Page-->
+		<br><br><br>
+		<a name="Manage"></li><h3 class="break">Manage Page</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Contents" class="top">[Top]</a>
+		
+		<p>
+			The Manage Page is your hub for creating and editing comic books.
+			
+			<a name="The Menu And Loading/Saving Config Files"><h4>The Menu And Creating/Loading/Saving Config Files</h4></a>
+		</p>
+		<div class="image-container">
+			<img src="resources/img/manage_menu.png" alt="[img]"><br>
+			<em>Figure 4: Manage Page Menu </em>
+		</div>
+		<p>
+			If you want to create a config file from scratch, simply type information into the fields as desired, press the
+			Menu button and click Save Config To File. Use the resulting file browser dialogue to save the config file. The
+			directory tree for comics can be arbitrarily complex, but the comic book folder must be somewhere in the 
+			comic book directory (which can be changed in the Settings page) for Lief to find it. The folder in which you
+			place the config file will be the folder that holds the comic pages and metadata. The path to the config file
+			can be used when searching for comic books in the Manage, Update and Read pages (along with the name
+			of the comic book). After saving the config file
+			you should see that comic book in the list of comic books.
+			<br><br>
+			To load a config file external to the comics directory, click Load Config From File and navigate to the 
+			file. The details will be loaded into the Manage Page fields, and from there you can save the config file to 
+			a folder within the comics directory. An alternative to this would be to just name the file "config.json"
+			and place it in a folder within the comics directory(Lief will find it the next time you exit the Main Menu).
+			<br><br>
+			To load a file from the comic books already managed by Lief (i.e. those comic books that are within the comics
+			directory), simply find the row entry of the comic book you want to load (use the search box if needed) and click
+			the Comic Name column of that entry. You might notice two numbers in brackets beside the Comic Name. These are
+			the comics read out of the total comic pages in the comic book. Clicking the Path column of a comic book entry
+			will open Windows Explorer to the comic book folder. There are three buttons under the Actions column for each
+			comic book. The first, labelled "&#x1F5AB;", saves the current Manage Page fields to that comic book. 
+			The second, labelled "&#x26aa;", clears the number of read comic pages of that comic book. 
+			The third, labelled "&#x2620;", deletes the comic book. 
+			<br><br>
+			The entry row for the comic book last loaded will be displayed in the Manage Page between the Menu button and
+			the Manage Page fields. Clicking Clear Fields will clear the Manage Page fields and remove the last
+			loaded comic from that spot. 
+		</p>
+			<a name="Import/Export Configs"><h4>Import/Export Config Files</h4></a>
+			Pressing the Import Config Files button will open a file dialogue, from which you can select one or 
+			multiple comic book
+			configuration files. These comic books will be imported into an "Imported" folder within the comic 
+			book directory. (You can move them out of the "Imported" folder at your leisure. Indeed, you can arrange your
+			comic books as you see fit. Lief doesn't mind.) The folder for each imported comic book will be the name of 
+			the comic book as specified within the configuration file. You can rename them if you like.
+			<br><br>
+			Pressing the Export Config Files button will open a folder dialogue, from which you can select which folder
+			to export all your config files to. The config files will be saved as whatever the name of the comic book is.
+			If a comic name is skipped because it contains invalid filename characters, or the save fails for some 
+			other reason, Lief will let you know.
+			
+			<a name="Web Comics"><h4>Web Comics: Overview</h4></a>
+			There are two types of digital comic book Lief was designed to handle: web comics and scanned comics. 
+			Scanned comics, discussed <a href="#Scanned Comics">later</a>, are made of image files sourced
+			manually. Web comics, on the other hand, are automatically sourced from the web by the built-in scraper
+			within Lief. For this reason, extra information is required in the comic book configuration files of 
+			web comics. There are also configuration options to compensate for the varying nature of web comic sites. 
+			By tuning these configurations, you should be able to scrape most web comics- dynamically generated
+			sites are out of Lief's current capabilities.
+			<br><br>
+			Note: Lief makes much use of CSS selectors. I've made a small but useful extension to make getting a 
+			CSS selector from a page easier than frolicking through inspector tools or the page source- you can just
+			right click on an element, such as the comic image, grab the CSS selector and paste it straight into
+			Lief. You can find more information <a href="#CSS Selector Tool">here</a>.
+			<br><br>
+			Here is an example of the information required for Lief to manage a web comic:
+		</p>
+		<div class="image-container">
+			<img src="resources/img/xkcd_fields_1.png" alt="[img]"><br>
+			<em>Figure 5: Lief With Required Fields Filled For The XKCD Web Comic</em>
+		</div>
+		<p>
+		
+			<a name="Transition Delay"><h4>Web Comics: Default Transition Delay</h4></a>
+			This is the delay (in seconds) that Lief will wait in the "auto" Hands-Free mode, where Lief defers to each comic on how long
+			to wait. It should be a positive integer, though leaving it blank or putting 0 will just make Lief defer instead to the current
+			default transition time.
+			
+			<a name="Scroll Delay"><h4>Web Comics: Default Scroll Delay</h4></a>
+			Lief will pause scrolling before moving to the next comic and within a comic page at set intervals.
+			This is the delay for which Lief will pause at these times.
+			
+			<a name="Start Pages"><h4>Web Comics: Start Pages</h4></a>
+			The Start Page field should contain the URL of the page that Lief will start at when scraping for 
+			comic pages. Most of the time, this will be the first page of the web comic, but it's possible to start from 
+			anywhere. The protocol (the "http://" part) is necessary. Multiple start pages can be given, separated by 
+			pressing ENTER (i.e. separated by newline characters). Lief crawls as far is he can go from the 
+			first start page. Once he runs out pages or fails for some other reason he will start at the next
+			start page given and continue, repeating until he runs out of start pages. Enter each start url
+			on a new line.
+			<br><br>
+			A Start Page entry can also be a pattern that will be expanded during a crawl. These patterns are of the 
+			form <code>[string]^[[string]^...] where min1-max1[,min2-max2, ...]</code> which generates a list of 
+			strings where the nth ^ has been replaced by the nth given range, inclusive. For example, 
+			"https://example.com/^/ where 1-5" would generate: 
+			<ul>
+				<li>https://example.com/1/</li>
+				<li>https://example.com/2/</li>
+				<li>https://example.com/3/</li>
+				<li>https://example.com/4/</li>
+				<li>https://example.com/5/</li>
+			</ul>
+			and "https://example.com/^/^/ where 0-1,5-6" would generate:
+			<ul>
+				<li>https://example.com/0/5/</li>
+				<li>https://example.com/0/6/</li>
+				<li>https://example.com/1/5/</li>
+				<li>https://example.com/1/6/</li>
+			</ul>
+			There can be no spaces between the ranges. Note that it doesn't matter if a start page doesn't 
+			exist (except the first one)- Lief will calmly step over it. Relying on these patterns can be efficient if you leave the Next Page Selector blank.
+			
+			<a name="Normal Selectors"><h4>Web Comics: Image And Next Page Selectors</h4></a>
+			The Image Selector field should contain a CSS selector specific to comic image (or images) you want
+			from each page. It is worth remembering that this selector should end with <code>img</code> because
+			the element should be an image element. (If you're using the CSS Selector tool and it gives you a string that
+			ends with anything other than <code>img</code> it won't work. In most case, you may just need to trim elements
+			from the end of the selector.)
+			<br><br>
+			The Next Page Selector field should contain the CSS selector for the <code>a</code> element that 
+			holds the link to the next page of the web comic.
+			In many cases, there will be an obvious "Next" button on the web comic page. The anchor from this element
+			will be the one you want. As with the Start Page field, you may have to trim elements until the <code>a</code>
+			is the last element in the string if you're using the CSS Selector tool. 
+			
+			<a name="Extra Selectors"><h4>Web Comics: Extra Selectors</h4></a>
+			For some web comics, you may want to scrape extra text information with each page. Common examples would be 
+			titles and hovertexts (A.K.A tooltip messages). These extra pieces of information will be shown along
+			with the comic title, authors etc. whilst reading. Note that, for sites with multiple comics per page,
+			Lief will match the nth comic image with the nth matched selector: if the kth comic image failed for some
+			reason, the kth selector is ignored. If there is no nth matched selector the first matching selector is used. 
+			Under the Optional expando you will find an area called Extra Selectors:
+		</p>
+			<div class="image-container">
+				<img src="resources/img/manage_extra_selectors.png" alt="[img]"><br>
+				<em>Figure 6: Extra Selectors</em>
+			</div>
+		<p>
+			There are three fields for each Extra Selector:
+			<ul>
+				<li>The first field, labelled "CSS Selector" in Figure 6, should contain the CSS selector for the 
+					element containing the information you want to scrape for. 
+				</li>
+				<li>If the second field, labelled "Attribute" in Figure 6, is left empty, Lief will grab the inner text of the 
+					selected element. If an attribute is given, Lief will grab the value of that attribute. Note that 
+					if an attribute	is given, then a CSS selector must also be provided. So, for example, if you wanted 
+					the hovertext of the comic image, the CSS selector would be the same as the Image Selector field and 
+					the attribute would be "title". But if you wanted the text inside a <code>p</code> or <code>div</code> 
+					element, the attribute field should be blank and the CSS selector would be something that selects the 
+					desired element. 
+				</li>
+				<li>The third field is a checkbox labelled "Include Children". This only comes into effect if the attribute
+					field is empty and, therefore, the inner text of a HTML element is going to be retrieved. Sometimes,
+					you want to include the inner text of descendant elements, and sometimes you don't. Check this
+					if you do.
+				</li>	
+			</ul>
+			
+			<a name="Anchor Selector"><h4>Web Comics: Anchor Selector</h4></a>
+			Most webcomic sites are simple: there is a page with a single image and a "Next" button that leads to the 
+			next page and image:
+		</p>
+			<div class="image-container">
+				<img src="resources/img/manage_anchor_selector_1.png" alt="[img]"><br>
+				<em>Figure 7: Example Of Webcomic Site, Simple Case</em>
+			</div>
+		<p>
+			Some sites, however, have top-level pages containing the "Next" button that contain multiple links to 
+			tangent pages holding the comic pages:
+		</p>
+			<div class="image-container">
+				<img src="resources/img/manage_anchor_selector_2.png" alt="[img]"><br>
+				<em>Figure 8: Example Of Webcomic Site Requiring Anchor Selector</em>
+			</div>
+		<p>
+			Thus, for each top-level page, Lief needs to go into each link and grab
+			the data from that page (using the normal selectors). If this is the case, all you need to do is add in the 
+			CSS selector for the anchors in the top-level pages to the Anchor Selector field.
+			
+			
+			<a name="Cookies"><h4>Web Comics: Cookies</h4></a>	
+			You will require cookies for certain websites to get past some kind of barrier. These would usually be 
+			websites that when you first visit them in a browser, you have to do something or 
+			agree to something, and then after that your browser "magically" remembers that you did that thing. 
+			I'll use Garfield as an example. Garfield has just started splashing their page with this:
+		</p>
+			<div class="image-container">
+				<img src="resources/img/garfield_splash.png" alt="[img]"><br>
+				<em>Figure 9: Example Of Splash Page - Perhaps Cookies Will Get Lief Around This?</em>
+			</div>
+		<p>
+			Lief won't handle this stuff for you, but there is a way around it. If you enter in a random year, month
+			and day, you'll be able to pass through into the normal website and you should notice that it 
+			remembers you - but only if you use the same browser. This is because the browser stores that piece of 
+			information in a cookie, that the website can access. We need to give that cookie to Lief, so he 
+			can proffer it up to the website instead of having to fill in any forms. A quick Google search 
+			will show you how to have a peek at the cookies your browser is storing for a certain website. Get the name
+			and value of the relevant cookie/s. Copy and 
+			paste each cookie name-value pair into the textbox labelled Cookies with each name separated from its value
+			by an equals sign, and each cookie separated by a semi-colon (e.g. <code>name1=value1;name2=value2;</code>).
+			Here is the Garfield example (note, the value is a long string, obviously encoded/encrypted in some way, and
+			will be different depending on what date you picked as your birthday):
+		</p>
+			<div class="image-container">
+				<img src="resources/img/garfield_cookies_example.png" alt="[img]"><br>
+				<em>Figure 10: Garfield Equipped With Cookie</em>
+			</div>
+		<p>	
+			Just as another example using a webcomic called Tranfusions, we can get around this:
+		</p>
+			<div class="image-container">
+				<img src="resources/img/transfusions_splash.png" alt="[img]"><br>
+				<em>Figure 11: Tranfusion Popup</em>
+			</div>
+		<p>	
+			by setting Lief up like this:
+		</p>
+			<div class="image-container">
+				<img src="resources/img/transfusions_cookies_example.png" alt="[img]"><br>
+				<em>Figure 12: Transfusion Equipped With Cookie</em>
+			</div>
+		<p>		
+			Most of the time you won't need cookies, but I couldn't leave Lief unable to grab Garfield comics!!
+			
+			
+			<a name="Other Options"><h4>Web Comics: Other Options</h4></a>		
+			<table>
+				<tr>
+					<th>Image Attribute</th>
+					<td>
+						This is optional because it default to "src", assuming that your Image Selector
+						selects an mage element. This may not always be the case. Sometimes you may have
+						lists of anchor tags to retrieve the image urls from (such is the case with 
+						<a href="http://hipsterhitler.com/comics/">Hipster Hitler</a>). In these cases your selector
+						may select the anchor tag, and you would type "href" into the Image Attribute field (you would
+						also check Get All Matching Images).
+					</td>
+				</tr>
+				<tr>
+					<th>Next Page Selector (First Page)</th>
+					<td>
+						Sometimes, the first page of a webcomic will have a slightly different template than other pages.
+						In particular, there may be less anchors in the navigation section, as the "Previous" and
+						"First" buttons aren't active. Things like this can mess with your Next Page selector when you
+						have nth-of-type(n) in it. To solve this, put the correct CSS Selector for the first page's
+						"Next" anchor in this text box. By default, Lief will only use this if he's on the first of
+						the lsit of Start Pages. If you want Lief to use this special Selector for all Start Pages, 
+						check Apply To All Start Pages.
+					</td>
+				</tr>
+				<tr>
+					<th>Stop URL</th>
+					<td>
+						In the normal case, Lief will just continue to crawl until something goes wrong- usually
+						because he simply runs out of pages. However, sometimes you want to split a comic book
+						into different chapters, or for some other reason you may want the crawler to stop at a 
+						certain comic page. Place a URL into this field and the Lief will stop at that page (non-inclusive).
+						Note that if multiple start pages are given, the stop page has to be after the last 
+						start page for it be effective. 
+					</td>
+				</tr>
+				<tr>
+					<th>Forbidden/Required Strings In Image URL</th>
+					<td>
+						This field serves to add another layer of selectivity on top of the CSS selector system. If you're
+						finding that Lief is downloading all the correct comic page images, plus some unwanted 
+						images, refining the CSS selector for the image might prove ineffective. Analysing the situation 
+						might reveal that all the unwanted images share a section (or sections) of URL. By putting that 
+						string (or those strings) in this field, Lief will avoid those images.
+						<br><br>
+						Sometimes the urls would be more effectively narrowed down by specifying strings that <em>must</em>
+						be found within the image url. Place them within the Strings Required field. For this to be
+						effective you will most likely want to check the Get All Matching Images box; if you don't,
+						Lief will only grab the first comic image from the page that matches the Image CSS Selector.
+						<br><br>
+						Note that Lief can handle multiple forbidden and required strings - simply place each string on
+						a new line.
+					</td>
+				</tr>
+				<tr>
+					<th>Replacement Extension</th>
+					<td>
+						Due to general weirdness in the cloud, webcomic images may be downloaded with incorrect extensions. 
+						Type in a replacement extension here, such as "png", to replace the extenson of all downloaded
+						images.
+					</td>
+				</tr>
+				<tr>
+					<th>Get All Matching Images</th>
+					<td rowspan="2">
+						Some webcomics contain multiple comic images on the one page. By default, Lief will only grab
+						the first image that matches the CSS selector. If you want Lief to collect all comic images that
+						match the CSS image selector, check this box. Lief will store each image as a separate 
+						comic page. If there are multiple images on each comic page and they are meant to be joined
+						as one single comic page, check the Join Images box as well.
+					</td>
+				</tr>
+				<tr><th>Join Images</th></tr>
+			</table> 
+			
+			
+			<a name="Scanned Comics"><h4>Scanned Comics: Overview</h4></a>
+			Webcomics only make up a portion of digital comics you might like Lief to manage. Scanned comics represent
+			the other portion, and differ from webcomics in their method of collection. Webcomics require some initial 
+			effort in configuration so that Lief can automatically scrape for comic pages; scanned comics rely on you, 
+			the user, to manually source images and import them yourself. Note that these images will generally come 
+			from the web too, in the form of image batches, but they may come from comics you've scanned into the 
+			computer yourself. Lief provides the functionality to import batches once you've downloaded/scanned them in.
+			
+			<a name="Import Archives"><h4>Scanned Comics: Import Archives</h4></a>
+			Clicking the Import Archives button will bring up a file browser dialogue, from which you can select one or
+			multiple compressed archives (which should contain images). Lief supports the same file types as 
+			7zip. Not that importing archives can take a little bit because a) decompressing files just generally
+			takes a while, as I'm sure you know, and b) Lief copies everything over to a temporary folder so as to
+			leave your archive files untouched. 
+			<br><br>
+			Each archive will be processed into its own folder within the "Imported" folder, which resides in the comics
+			directory. The folder will be named the same name as the original archive unless that folder already 
+			exists, in which case "_X" will be appended where X is the lowest number to avoid name collision.
+			<br><br>
+			.cbz and .cbr files are of ZIP and RAR types under the hood, respectively. If you attempt to import a set of 
+			archive files with these extensions and Lief says they failed because he "could not open archive", then
+			you may want to check whether the .cbr files are RAR and not ZIP types. Same goes for the .cbz files. You
+			can see what type they are by opening them in 7zip.
+			
+			<a name="Import Folder"><h4>Scanned Comics: Import Folder</h4></a>
+			Clicking Import Folder will open a folder browser dialogue, allowing you to select a folder to import. The folder
+			can contain an arbitrarily complex directory tree, but each folder within the tree should contain
+			either folders or images, and not both (Lief does ignore files with a ".json" extension, 
+			meaning you can import a comic book folder, although you could simply copy the folder you want to import
+			into your comics directory). The tree will be copied into the "Imported" folder within the
+			comics directory, and each folder that contains images will be made into a new comic book (essentially 
+			by giving it a basic config file, renaming the images and creating the metadata file required for the images).
+			Each comic book will be given the name of the folder in which the images reside. The folder name can be changed
+			after an import, and the comic book name can be changed from within Lief by loading it into the Manage Page. 
+			
+			<a name="Add Pages"><h4>Scanned Comics: Add Pages</h4></a>
+			Importing archives and folders creates new comic books. If you want to add images to existing comic books, 
+			you must use the Add Pages button. The Add Pages button is only enabled when a comic book has been loaded
+			into the Manage Page. Clicking it will open a file browser dialogue, from which you can select one or
+			multiple image files. These image files will be added to the comic book that was last loaded into the 
+			Manage Page. 
+			
+			<a name="Fix Missing Pages"><h4>Fix Missing Pages</h4></a>
+			There may be times when an image is accidentally deleted from a comic book. The first sign of this having
+			occured will most likely be you running into the following image whilst reading:
+		</p>
+			<div class="image-container">
+				<img src="resources/img/image_not_found.png" alt="[img]"><br>
+				<em>Figure 13: Image Not Found Notification</em>
+			</div>
+		<p>	
+			In the Manage Page, after a comic book has been loaded, the Fix Missing Pages button will become enabled. 
+			Clicking it will present you with a maximum of two options. If you check the Delete Missing box and press Fix,
+			the metadata for any missing images will be expunged. Generally, this option should be selected if you
+			deleted pages from the comic book on purpose. The second option, only available for webcomics, is to Attempt
+			Restoration. This option will attempt to re-download any missing images from the place where the original image
+			was downloaded. This second option is analagous to manually sourcing, renaming and replacing missing images 
+			for scanned comics. 
+			
+			<a name="Read Configurations"><h4>Read Configurations</h4></a>
+			There are two options available on the Manage Page that affect default settings when reading comics. 
+			<table>
+				<tr>
+					<th>Fill Images To Width By Default When Reading</th>
+					<td>
+						Checking this option denotes that, by default, comic images will be stretched to fill the width
+						of the image area, meaning you have to scroll to reach the bottom of the page (images are 
+						generally longer than they are wide). Some comics are best viewed without the need
+						for scrolling. Others are best viewed as scrolling pages- these are
+						usually webcomic that have designed as pages, or scanned comic books. This sets the default
+						for the comic book, which can be overrode in the Read Page. 
+					</td>
+				</tr>
+				<tr>
+					<th>Randomise By Default</th>
+					<td>
+						Some comics have an innate order, whilst others don't need any context to make sense. Comics that
+						contain stories generally shouldn't be randomised. If you configure some comics to maintain 
+						order and others to randomise by default, it is easy to read ordered and randomised comics together,
+						where the ordered comics stay ordered relative to themselves. Again, all of this can be overridden 
+						from the Read Page itself.
+					</td>
+				</tr>
+			</table>
+		</p>
+		
+		<!--Update Page-->
+		<br><br><br>
+		<a name="Update"></li><h3 class="break">Update Page</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Contents" class="top">[Top]</a>
+		
+		<p>
+			From the Update Page, select which comic books to update before pressing Update. Lief will proceed to update
+			the selected comics in a round-robin fashion, grabbing one batch from each comic book before moving to the 
+			next. Whether verbose mode is on or off (set in the Settings Page) will dictate the amount of messages
+			you see scrolling up the console window. Lief will crawl each comic book until it fails. When it fails for
+			all comic books (and there are no more start pages to continue with) you'll be able to go back to the Main Menu.
+			When a crawl fails, the specifics of the failure may not make sense as displayed in the console window. The 
+			specifics of the error don't really matter- most of the time it just means there are no more pages to scrape 
+			along that route. To stop the crawl before this happens, press Stop and wait for Lief to reach an exit point.
+			<br><br>	
+			Note that it may take a while to initially load the comic books. This is because Lief actually
+			retrieved the first web page he will visit as part of the validation process. A little patience will
+			see you through this. 
+			<br><br>
+			Pressing ? while holding control will toggle the visibility of the textbox scrollbar. While you are holding
+			in control, the scrollbar won't scroll to the bottom after each line is output, making it easier to 
+			scroll through the console while Lief is updating.
+		</p>
+		<div class="image-container">
+			<img src="resources/img/crawl_page.png" alt="[img]"><br>
+			<em>Figure 14: Updating Comics</em>
+		</div>
+		
+		
+		<!--Read Page-->
+		<br><br><br>
+		<a name="Read"></li><h3 class="break">Read Page</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Contents" class="top">[Top]</a>
+		
+		<p>
+			The read page is a customisable interface allowing you to actualy read your comics. Clicking the Menu button
+			(1) will show/hide the Menu Pane.
+		</p>
+			<div class="image-container">
+				<img src="resources/img/read_01.png" alt="[img]"><br>
+				<em>Figure 15: Read Page</em>
+			</div>
+		<p>	
+			<a name="Selecting Comics To Read"><h4>Selecting Comics To Read</h4></a>
+			All your comics will be listed as checkboxes (2), 
+			from which you can select the comic books you'd like to read. 
+			By default, the comics are listed alphabetically. Clicking Sort By Date will sort them by date last read
+			(hovering over a comic book will show you what that date is), and typing into the search box will narrow 
+			the selection to those containing the search string in their path or its name (as the name of a comic
+			book does not have to be the name of the folder in which it has been placed). 
+			Clicking All/None will select/deselect all the
+			comic books in the current selection list, so if you've narrowed the list those not selected won't be affected.
+			The numbers in the brackets are (Number Of Comic Pages Read / Total Number Of Comic Pages).
+			<br><br>
+			If you only want a certain number of comic pages from each book to be loaded (if, for example, you have 100 of one
+			comic and 30 of another but want an even spread of each) type the number of comic pages you'd like in the
+			Limit Number textbox (3). Note that this works well with randomisation: basically, Lief removes read comic 
+			pages (if need be) and randomises (if need be) before picking the specified number of comic pages from each comic
+			book. Then the whole pool is randomised (if need be). Clicking Go will move Lief to act on your 
+			specifications and present you with your first comic page (if there are any to show).
+			
+			<a name="Read Options"><h4>Read Options</h4></a>
+			By default, Lief will not save any comic pages you read, nor will he filter out any comics marked as read. 
+			Checking Filter Read will move Lief to remove any comic pages marked as read the next time you press 
+			Go. Checking Save Read will move Lief to mark the comic pages you've read as read the next time you
+			press Go and/or the next time you press &#xab; to exit the Read Page (this means you can change your mind
+			about this while reading). These two checkboxes are part of the set of variables saved as user settings
+			if you've told Lief he should save such things (see <a href="#Settings">here</a></li> for more information on that).
+			<br><br>
+			The Comic Order option (5) specifies Lief's randomisation behaviour. Each comic book has a default setting, 
+			which can be changed from the Manage Page- either they should be randomised, or not. You can set Comic Order 
+			to Default if you want Lief to respect this behaviour; Sorted will force ordering (note, comic pages are 
+			ordered by comic page number and then by comic book name); Random will force randomisation of all comic books. 
+			Lief does not save this as a user setting and the default is, fittingly, Default. 
+			<br><br>
+			One interesting and useful feature of Lief presents itself when you set Comic Order to Default, and select 
+			some comic books that should be randomised and some comic books that should be ordered. Lief will randomise 
+			all the comic pages, but comic books that should be ordered will keep their order releative to other comic 
+			pages in the same book. Note that forcing randomisation will override this behaviour. 
+			<br><br>
+			Newly added, and not shown on the diagram yet, is a Width textbox. I've sometimes found that having the 
+			comic pages fill the entire width makes them...
+			too wide. Enter a number in here and press enter to specify the actual image field width. Bound and unbound
+			functionality will work the same - the only difference is the maximum width of the comic images. Enter 
+			<code>0</code> to reset to maximum. 
+			<br><br>
+			Also newly added and not shown yet is the Scroll Delay, or S.Delay, textbox. This textbox can either contain an integer > 0, or "auto".
+			If there is an integer, that will be the overriding setting for how long Lief will pause scrolls for.
+			If you put "auto" in there, Lief will defer to the comic configurations where it can, or- faling that- the last 
+			entered integer.
+			<br><br>
+			Also newly added and not shown yet is the HandsOff checkbox. With this feature turned on, Lief will automatically
+			turn the page after a delay (the delay begins when image has been scrolled). The delay is the same amount of time
+			that Lief would pause a scroll for.
+			
+			<br><br>
+			These textbox settings come intio effect when you press enter with the cursor focused in them.
+			
+			<a name="Select Details"><h4>Select Details</h4></a>
+			By default, Lief will will show you all the information he can about a comic page: the name, the author(s), the
+			comic page URL, and any other information retrieved using custom selectors (see <a href="#Selectors">here</a>). 
+			This tends to look cluttered. You can selectively remove pieces of information by deselecting checkboxes
+			from Select Details (6). Deselecting Any will remove the entire Details Pane. Lief remembers which  
+			details were checked/unchecked as user settings. Lief also remembers the state of the checkboxes for custom
+			selectors for each specific comic book- these are reset each time you enter the Read Page and are not 
+			stored in user settings. In this way, you can specify whether you want to see authors etc. as you read,
+			and you can specify which extra bits of information for each comic book you want to see.
+			<br><br>
+			Checking Hide Scroll (7) will stop the scrollbar from appearing, even when a comic is too big to fit on the 
+			screen. If you check this, you can still scroll using arrow keys make use of automatic scrolling via the 
+			spacebar. Note that manually zooming in will cause scrollbars to appear regardless of the state of this 
+			option, but the scrollbars will disappear again once zoom has gone back to normal. 
+			The Hide Borders checkbox (7) makes the border around the image dissapear- just another thing that might
+			look cluttered to some people. These are both options that Lief remembers as user settings. 
+			<br><br>
+			Speaking of clutter, clicking Hide Buttons (next to the Menu button) will hide all the buttons on the Read Page. 
+			You can re-show them by moving the cursor to the top or bottom of the page. The shortcut key to toggle 
+			hide the buttons is N.
+			
+			<a name="Bound/unbound"><h4>Bound/Unbound Pages</h4></a>
+			Some comics are best viewed without the need for scrolling. Others are best viewed as scrollable pages- 
+			these are usually webcomics that have been designed as pages, or scanned comic books/manga. Each comic book has 
+			a default setting telling Lief whether to stretch the comic pages to fill the width of the
+			image area, meaning pages are bigger and you will probably have to scroll to reach the bottom of the 
+			page. Otherwise Lief will fit the whole image such that you don't need to scroll
+			(in both cases, aspect ratio is repected). The top right button of the Read Page toggles Lief's bounding
+			behaviour from Default (which respectes each individual comic book's default setting) to Unbound (which 
+			fills images to the width of the image area) to Bound (which contains the image such that no scrolling
+			is needed). The shortcut key to toggle Bound/Unbound/Default is M.
+			
+			<a name="Favourites"><h4>Favourites</h4></a>
+			While reading, you may come across comic pages that you want to save for future reference (mostly,
+			this pertains to pages from comic books that have no inherent order). Pressing the &#x2764; button
+			while copy the comic page to a Favourites folder in the comics directory (creating it if it doesn't
+			already exist). This then becomes part of the Favourites comic book, which can be treated like a normal
+			comic book. 
+			
+			<a name="Navigation"><h4>Navigating, Zooming and Scrolling</h4></a>
+			Navigating through the loaded comic pages is fairly intuitive: you can use the buttons on the bottom
+			toolbar, the arrow keys, or the A and D keys. To zoom in, press the + key. To zoom out, press the - key. 
+			To reset the zoom level to normal, press the 0 key. If the image is zoomed in so that there is room to
+			scroll horizontally, the arrow keys will contol the scrollbar rather than navigate to the next comic page.
+			You may notice that there is no standard increment by which an image is zoomed. This is because Lief 
+			deals with many different types of images of many different dimensions and quality.
+			<br><br>
+			Scrolling works in the intuitive way. Lief also provides automatic scrolling: pressing Spacebar will
+			start/stop the automatic scrolling. Pressing &lt; and &gt; will slow and speed up the scroller, respectively.
+			If the image is scrolled to the bottom when you press Spacebar, Lief will move to the next comic page, pause for
+			a bit, and then continue scrolling. 
+		</p>
+			
+				
+		<!--Shortcut Keys-->
+		<br><br><br>
+		<a name="Shortcut Keys"></li><h3 class="break">Shortcut Keys</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Contents" class="top">[Top]</a>
+		
+		<p>	
+			<a name="Keys All"></li><h4>All Pages</h4></a>
+			<table>
+				<tr>
+					<td>Ctrl-BACKSPACE</td><td>Go back to Main Menu. If there, exit Lief</td>
+				</tr>
+				<tr>
+					<td>F11</td><td>Toggle full screen</td>
+				</tr>
+				<tr>
+					<td>ESCAPE</td><td>Exit full screen</td>
+				</tr>
+			</table>
+			
+			<a name="Keys Main Menu"></li><h4>Main Menu Page</h4></a>
+			<table>
+				<tr>
+					<td>R</td><td>Go to Read Page</td>
+				</tr>
+				<tr>
+					<td>U</td><td>Go to Update Page</td>
+				</tr>
+				<tr>
+					<td>M</td><td>Go to Manage Page</td>
+				</tr>
+				<tr>
+					<td>S</td><td>Go to Settings Page</td>
+				</tr>
+			</table>
+			
+			<a name="Keys Read"></li><h4>Read Page</h4></a>
+			<table>
+				<tr>
+					<td>Ctrl-M</td><td>Show/hide menu pane</td>
+				</tr>
+				<tr>
+					<td>Ctrl-(1...9)</td><td>Show/hide comic details</td>
+				</tr>
+				<tr>
+					<td>Ctrl-T</td><td>Show/hide scrollbar</td>
+				</tr>
+				<tr>
+					<td>Ctrl-Y</td><td>Show/hide borders</td>
+				</tr>
+				<tr>
+					<td>Ctrl-Q</td><td>Set focus to the scrollbar (in other words, de-focus any text-boces)</td>
+				</tr>
+				<tr>
+					<td>Ctrl-ENTER</td>
+					<td>(Only when menu pane is visible)
+						<br>
+						Synthesises pressing Go with one difference: if there are no comic books selected, 
+						all comic books will be selected. 
+					</td>
+				</tr>
+				<tr>
+					<td>Ctrl-U</td><td>(Only when menu pane is visible)<br>Check/uncheck Save Read</td>
+				</tr>
+				<tr>
+					<td>Ctrl-I</td><td>(Only when menu pane is visible)<br>Check/uncheck Filter Read</td>
+				</tr>
+				<tr>
+					<td>Ctrl-O</td><td>(Only when menu pane is visible)<br>Toggle through comic ordering methods</td>
+				</tr>
+				
+				<tr>
+					<td>ESCAPE</td><td>Reset scrollbar, reset zoom, and show the toolbars</td>
+				</tr>
+				<tr>
+					<td>+</td><td>Zoom in (can also be accomplished via left mouse click without drag)</td>
+				</tr>
+				<tr>
+					<td>-</td><td>Zoom out (can also be accomplished via right mouse click without drag)</td>
+				</tr>
+				<tr>
+					<td>0</td><td>Reset zoom level</td>
+				</tr>
+				<tr>
+					<td>,</td><td>Decrease velocity of automatic scrollbar</td>
+				</tr>
+				<tr>
+					<td>.</td><td>Increase velocity of automatic scrollbar</td>
+				</tr>
+				<tr>
+					<td>L</td><td>Reset velocity of automatic scrollbar to 0</td>
+				</tr>
+				<tr>
+					<td>B</td><td>Toggle default/bound/unbound</td>
+				</tr>
+				<tr>
+					<td>H</td><td>Show/Hide Toolbars</td>
+				</tr>
+				<tr>
+					<td>P</td><td>Toggle Hands Free mode on/off</td>
+				</tr>
+				<tr>
+					<td>O</td><td>Toggle Scroll Delay from auto to/from a default value</td>
+				</tr>
+			</table>
+			
+			<a name="Keys Manage"></li><h4>Manage Page</h4></a>
+			<table>
+				<tr>
+					<td>Ctrl-'</td><td>Add pages to loaded comic book</td>
+				</tr>
+				<tr>
+					<td>Ctrl-]</td><td>Fix missing pages in loaded comic book</td>
+				</tr>
+				<tr>
+					<td>Ctrl-\</td><td>Delete loaded comic book</td>
+				</tr>
+				<tr>
+					<td>Ctrl-?</td><td>Reset the loaded comic book's pages to unread</td>
+				</tr>
+				<tr>
+					<td>Ctrl-M</td><td>Toggle Menu</td>
+				</tr>
+				<tr>
+					<td>Ctrl-S</td><td>Save the comic book. If there's a loaded comic book, simply save it. Otherwise,
+									   save to file.</td>
+				</tr>
+				<tr>
+					<td>Ctrl-SHIFT-S</td><td>Save the comic book to file</td>
+				</tr>
+				<tr>
+					<td>Ctrl-O</td><td>Open a config from file</td>
+				</tr>
+				<tr>
+					<td>Ctrl-N</td><td>Clear fields</td>
+				</tr>
+				<tr>
+					<td>Ctrl-U</td><td>Reset all comic pages to unread</td>
+				</tr>
+				<tr>
+					<td>Ctrl-I</td><td>Import config files</td>
+				</tr>
+				<tr>
+					<td>Ctrl-E</td><td>Export config files</td>
+				</tr>
+				<tr>
+					<td>Ctrl-K</td><td>Import archives</td>
+				</tr>
+				<tr>
+					<td>Ctrl-D</td><td>Import folder</td>
+				</tr>
+			</table>
+			
+			<a name="Keys Update"></li><h4>Update Page</h4></a>
+			<table>
+				<tr>
+					<td>Ctrl-ENTER</td>
+					<td>Synthesises pressing Update with one difference: if there are no comic books selected, 
+						all comic books will be selected.</td>
+				</tr>
+			</table>
+			
+			<a name="Keys Crawl"></li><h4>Crawl Page</h4></a>
+			<table>
+				<tr>
+					<td>Ctrl-?</td><td>Show/Hide the scrollbar</td>
+				</tr>
+				<tr>
+					<td>Hold Ctrl</td><td>Stop the scrollbar from scrolling to the bottom after each line is output
+										  to the console</td>
+				</tr>
+			</table>
+		</p>
+			
+			
+			
+		<!--Errors-->
+		<br><br><br>
+		<a name="Errors"></li><h3 class="break">Errors</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Contents" class="top">[Top]</a>
+		<p>
+			<ul>
+				<li>If Lief fails to start, make sure there are no broken configuration files in the comics directory.
+					You can run Lief from anywhere, but note that if the comics directory is "." (which it defaults
+					to), the comics directory becomes the directory of the <em>working directory</em> - i.e. the place
+					from where you ran Lief. If you run Lief from a shortcut file, the directory of that shortcut file
+					would become the comics directory. You can change this by setting the comics directory explicity. 
+			</ul>
+		</p>
+			
+		<!--Extra Resources-->
+		<br><br><br>
+		<a name="Extra Resources"></li><h3>Extra Resources and Information</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Contents" class="top">[Top]</a>
+		
+		<p>
+		
+			<a name="Tips"></li><h4>Configuration Tips</h4></a>
+			Having multiple start pages helps extend a comic book using the same config parameters. If you ever need to 
+			extend a comic book across sites, you can scrape the comics with two different config files and import the images
+			from one to the other.
+			<br><br>
+			As a general rule of thumb, larger CSS Selectors will mean faster crawl times.
+			
+			<a name="CSS Selector Tool"></li><h4>CSS Selector Tool</h4></a>	
+			I made a browser extension that attempts to generate a CSS Selector for a given element on the page. It isn't
+			perfect, but I've found it useful. I've talked about it already <a href="#Web Comics">here</a>. 
+			I haven't made it available via any official repositories online yet, but I will include it with 
+			Lief (you can delete it without hassle). You will have to load it in manually for each browser session 
+			that you want to use it in.
+			<ul>
+				<li>In Firefox, go the address "about:debugging", click Load Temporary Add-on, navigate to a folder
+				called "copy-css-selector" (it will be with the Lief executable), open that folder and double-click on any
+				file in that folder. You will see "CSS Selector" appear in the list of leaded extensions. </li>
+				<li>In Chrome, click the Menu icon (three vertival dots) -> More Tools -> Extensions. Navigate to the 
+				"CSS Selector" folder, select it and press Okay. You may have to check Enable in the newly
+				created	"CSS Selector" entry in the list of extensions.</li>
+			</ul>
+			Once loaded, you can right-click on elements and a new menu option will be there: "Grab CSS Selector". This
+			will present an alert box containing a CSS selector for that element. Most of the time, it works fairly well, but
+			you may have to edit the selector yourself (if, for example, you're after a selector for the "next page"
+			anchor, and the selector ends with something like <code>a[rel="Next"] div</code> then removing the
+			<code>div</code> should make it select the anchor properly).
+		</p>
+		
+		
+		
+		
+		
+		<!--Contact Info-->
+		<br><br><br>
+		<a name="Contact"><h3>Contact Info</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Contents" class="top">[Top]</a>
+		<p>
+			Lief was made and is maintained by me, Daniel Dowsett. I would very much welcome feedback, including
+			suggestions for features that would make him more perfect for you (even if I decide not to add them to him 
+			for my version). You can email me at:
+			<br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code>eulerspill@protonmail.com</code>
+			<br><br>
+			Also email me if something doesn't appear to be working, or if something's not working the way it should, 
+			or if Lief spontaneously develops rudimentary intelligence and starts preaching the existence of Silicon 
+			Heaven or demanding you eat toast.
+		</p>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+		
+	</body>
+</html>
